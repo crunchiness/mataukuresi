@@ -52,9 +52,6 @@
     "yargs": "5.x.x"
   },
   "dependencies": {
-    "bing-image": "latest",
-    "chrome-fs": "^10.0.0",
-    "fs": "0.0.1-security",
-    "geoip-country": "^3.1.9"
+    "jquery": "^3.1.1"
   }
 }

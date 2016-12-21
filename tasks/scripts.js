@@ -37,6 +37,9 @@ gulp.task('scripts', (cb) => {
           test: /\.js$/,
           loader: 'eslint-loader',
           exclude: /node_modules/
+        // }, {
+        //   test: /\.json$/,
+        //   loader: 'json'
         }],
         loaders: [{
           test: /\.js$/,
@@ -45,6 +48,14 @@ gulp.task('scripts', (cb) => {
       },
       eslint: {
         configFile: '.eslintrc'
+      },
+      resolve: {
+        // alias: {
+        //   fs$: 'chrome-fs',
+        //   // net$: 'chrome-net'
+        // },
+        // extensions: ['.js', '.json'],
+        modules: ['node_modules']
       },
     }, null, (err, stats) => {
       log(`Finished '${colors.cyan('scripts')}'`, stats.toString({
